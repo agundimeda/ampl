@@ -16,8 +16,8 @@ subject to midlimit: 30 <= mid <= 70;
 
 subject to adviser: low >= (1/2)*mid + 50;
 
-option solver cplex;
-solve;
+#option solver cplex;
+#solve;
 
 display low;
 display mid;
