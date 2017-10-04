@@ -1,7 +1,7 @@
 
 <document>
-    <category>nco</category>
-    <solver>KNITRO</solver>
+    <category>milp</category>
+    <solver>CPLEX</solver>
     <inputMethod>AMPL</inputMethod>
     <email> agundimeda@gmail.com</email>
     <model><![CDATA[
@@ -22,15 +22,6 @@ subject to cornlimit: corn <= 1800;
 subject to oatslimit: oats <= 1000;
 subject to wheatlimit: wheat <= 600;
 
-option solver cplex;
-solve;
-
-display profit;
-
-display mix1;
-display mix2;
-display mix3;
-
     ]]></model>
 
     <data><![CDATA[
@@ -38,6 +29,11 @@ display mix3;
 
     <commands><![CDATA[
 	solve;
+	display profit;
+
+	display mix1;
+	display mix2;
+	display mix3;
     ]]></commands>
 
     <comments><![CDATA[

@@ -1,7 +1,7 @@
 
 <document>
-    <category>nco</category>
-    <solver>KNITRO</solver>
+    <category>milp</category>
+    <solver>CPLEX</solver>
     <inputMethod>AMPL</inputMethod>
     <email> agundimeda@gmail.com</email>
     <model><![CDATA[
