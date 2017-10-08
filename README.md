@@ -4,6 +4,5 @@ This repository contains AMPL models, data, and commands formatted in the xml fo
 
 NEOS-Server page with APIs:
   https://github.com/NEOS-Server
-
 Course Resources:
   http://amadeus.ecs.umass.edu/mie373/379.html
