@@ -1,0 +1,38 @@
+
+<document>
+    <category>milp</category>
+    <solver>CPLEX</solver>
+    <inputMethod>AMPL</inputMethod>
+    <email> agundimeda@gmail.com</email>
+    <model><![CDATA[
+reset;
+
+var p1; var t1 = 10*p1;
+var p2; var t2 = 12*p2;
+var ts;
+
+maximize profit:
+	6*p1 + 7.5*p2 - 0.5*ts;
+subject to machinelimit: t1 + t2 <= 2500 + ts;
+subject to p1limit: 0 <=  p1 <= 200;
+subject to p2limit: 0 <=  p2 <= 45;
+
+    ]]></model>
+
+    <data><![CDATA[
+    ]]></data>
+
+    <commands><![CDATA[
+	solve;
+	display profit;
+	display p1,p2;
+	display ts;
+    ]]></commands>
+
+    <comments><![CDATA[
+    ]]></comments>
+
+    </document>
+
+
+
