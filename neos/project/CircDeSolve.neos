@@ -35,7 +35,7 @@ subject to thevenin:
     ]]></model>
 
     <data><![CDATA[
-	param Rth = 23;
+	param Rth = 394850;
     ]]></data>
 
     <commands><![CDATA[
