@@ -1,7 +1,7 @@
 
 <document>
     <category>lp (or nlp,milp,etc...)</category>
-    <solver>CPLEX (or MINOS for nlp)</solver>
+    <solver>CPLEX (or MINOS/KNITRO for nlp)</solver>
     <inputMethod>AMPL</inputMethod>
     <email> youremail@example.com</email>
   
