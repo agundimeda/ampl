@@ -14,34 +14,34 @@ var Rnum2 integer >= 0;
 var Rnum3 integer >= 0;
 var Rnum4 integer >= 0;
 var Rnum5 integer >= 0;
+var Rnum6 integer >= 0;
+var Rnum7 integer >= 0;
 
 param Rval1 = 1;
 param Rval2 = 10;
 param Rval3 = 100;
-param Rval4 = 1000;
-param Rval5 = 10000;
+param Rval4 = 1000; #1kOhm
+param Rval5 = 10000; #10kOhm
+param Rval6 = 100000; #100kOhm
+param Rval7 = 1000000; #1mOhm
 
 minimize numResistors:
-	Rnum1 + Rnum2 + Rnum3 + Rnum4 + Rnum5;
+	Rnum1 + Rnum2 + Rnum3 + Rnum4 + Rnum5 + Rnum6 + Rnum7;
 
 subject to thevenin:
-	Rval1*Rnum1 + Rval2*Rnum2 + Rval3*Rnum3 + Rval3*Rnum3 + Rval4*Rnum4 + Rval5*Rnum5 = Rth; 
+	Rval1*Rnum1 + Rval2*Rnum2 + Rval3*Rnum3 + Rval3*Rnum3 + Rval4*Rnum4 + Rval5*Rnum5 + Rval6*Rnum6 + Rval7*Rnum7 = Rth; 
 
-#subject to nonzero1: Rnum1 >= 0;
-#subject to nonzero2: Rnum2 >= 0;
-#subject to nonzero3: Rnum3 >= 0;
-#subject to nonzero4: Rnum4 >= 0;
-#subject to nonzero5: Rnum5 >= 0;
     ]]></model>
 
     <data><![CDATA[
-	param Rth = 394850;
+	param Rth = 1234567;
     ]]></data>
 
     <commands><![CDATA[
 	solve;
 	display numResistors;
-	display Rnum1,Rnum2,Rnum3,Rnum4,Rnum5;
+	display Rth;
+	display Rnum1,Rnum2,Rnum3,Rnum4,Rnum5,Rnum6,Rnum7;
     ]]></commands>
 
     <comments><![CDATA[
